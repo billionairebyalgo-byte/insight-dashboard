@@ -1,73 +1,168 @@
-# Welcome to your Lovable project
+# DreamPilot Analytics Platform UI
 
-## Project info
+A modern, animated **Analytics Dashboard UI** built with strict feature-based architecture and premium motion design.
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+This repository is a reusable **DreamPilot template** designed for OpenClaw-driven project initialization.
 
-## How can I edit this code?
+---
 
-There are several ways of editing your application.
+## Purpose
 
-**Use Lovable**
+This project provides a production-ready analytics foundation for:
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+- SaaS dashboards
+- Product analytics
+- Finance insights
+- CRM metrics
+- Operational reporting systems
 
-Changes made via Lovable will be committed automatically to this repo.
+It is designed to be **cloned and extended**, not modified structurally.
 
-**Use your preferred IDE**
+---
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+## Core Features
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+### Overview
+- KPI summary cards
+- Time range selector
+- Traffic and growth trends
+- Conversion highlights
 
-Follow these steps:
+### Realtime
+- Active users counter
+- Live event feed (mocked)
+- Auto-refresh indicator
+- Live status badge
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+### Reports
+- Saved reports list
+- Filters and segmentation
+- Export preview panel
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+### Funnels
+- Multi-step funnel visualization
+- Drop-off indicators
+- Conversion percentages
 
-# Step 3: Install the necessary dependencies.
-npm i
+### Cohorts
+- Cohort retention grid
+- Retention curves
+- Heatmap visualization
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
+### Retention
+- Daily / weekly / monthly retention
+- Churn metrics
+- Trend comparisons
 
-**Edit a file directly in GitHub**
+### Performance
+- Load time metrics
+- Error rate indicators
+- Service performance summaries
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+### Exports
+- CSV / PDF export UI
+- Export job status tracking
+- Download history panel
 
-**Use GitHub Codespaces**
+---
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+## UX & Design System
 
-## What technologies are used for this project?
+- Floating collapsible navigation
+- Icon-first sidebar with hover expansion
+- Subtle motion transitions (150–250ms)
+- Animated KPI counters
+- Chart mount animations
+- Skeleton loaders (no blocking spinners)
+- Dark & light mode support
+- Financial-style semantic colors:
+  - Green → Positive
+  - Amber → Warning
+  - Red → Negative
 
-This project is built with:
+---
+
+## Folder Structure (Strict)
+
+src/
+├─ components/ # Shared UI primitives
+├─ features/
+│ └─ analytics/
+│ ├─ overview/
+│ ├─ realtime/
+│ ├─ reports/
+│ ├─ funnels/
+│ ├─ cohorts/
+│ ├─ retention/
+│ ├─ performance/
+│ └─ exports/
+├─ layouts/ # App shell & navigation
+├─ hooks/ # Shared hooks
+├─ lib/ # Utilities
+├─ pages/ # Thin composition-only pages
+
+
+---
+
+## Architecture Rules
+
+- Pages contain ZERO business logic
+- No cross-feature imports
+- All feature logic lives inside `features/analytics/*`
+- Each feature exposes public exports via `index.ts`
+- Shared UI primitives live in `components/`
+- TypeScript strict mode enforced
+
+Violating these rules breaks DreamPilot compatibility.
+
+---
+
+## Tech Stack
 
 - Vite
-- TypeScript
 - React
-- shadcn-ui
+- TypeScript
 - Tailwind CSS
+- shadcn-ui
+- Lucide Icons
 
-## How can I deploy this project?
+---
 
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
+## Development
 
-## Can I connect a custom domain to my Lovable project?
+### Requirements
+- Node.js 18+
+- npm
 
-Yes, you can!
+### Setup
+```sh
+git clone <REPO_URL>
+cd <PROJECT_NAME>
+npm install
+npm run dev
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+Deployment
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+Designed for deployment via Lovable.
+
+Automatic commits
+
+Preview builds
+
+Production publishing
+
+Custom domain support
+
+Intended Usage
+
+Ideal for:
+
+SaaS analytics dashboards
+
+Admin reporting systems
+
+Startup MVPs
+
+Enterprise data platforms
+
+AI-extended internal tools
